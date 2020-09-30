@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="2" parallel="tests" name="Failed suite [testa]" guice-stage="DEVELOPMENT" verbose="0">
+  <parameter name="platformVersion" value="8.0"/>
+  <parameter name="udid" value="emulator-5556"/>
+  <parameter name="deviceName" value="emulator-5556"/>
+  <parameter name="url" value="http://0.0.0.0:4723/wd/hub"/>
+  <parameter name="systemPort" value="8100"/>
+  <test parallel="tests" name="Device-2(failed)">
+    <parameter name="platformVersion" value="8.0"/>
+    <parameter name="udid" value="emulator-5556"/>
+    <parameter name="deviceName" value="emulator-5556"/>
+    <parameter name="url" value="http://0.0.0.0:4723/wd/hub"/>
+    <parameter name="systemPort" value="8100"/>
+    <classes>
+      <class name="testScripts.TestScript1">
+        <methods>
+          <include name="setup"/>
+          <include name="setup"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- testScripts.TestScript1 -->
+    </classes>
+  </test> <!-- Device-2(failed) -->
+  <test parallel="tests" name="Device-1(failed)">
+    <parameter name="platformVersion" value="6.0"/>
+    <parameter name="udid" value="emulator-5554"/>
+    <parameter name="deviceName" value="emulator-5554"/>
+    <parameter name="url" value="http://0.0.0.0:4723/wd/hub"/>
+    <parameter name="systemPort" value="8100"/>
+    <classes>
+      <class name="testScripts.TestScript1">
+        <methods>
+          <include name="setup"/>
+          <include name="setup"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- testScripts.TestScript1 -->
+    </classes>
+  </test> <!-- Device-1(failed) -->
+</suite> <!-- Failed suite [testa] -->
