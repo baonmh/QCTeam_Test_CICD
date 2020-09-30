@@ -1,19 +1,40 @@
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
-<suite name="parallel">
-    <test name="Device-1">
-        <parameter name="deviceName" value="emulator-5554" />
-        <parameter name="udid" value="emulator-5554" />
-        <parameter name="platformVersion" value="6.0" />
-        <parameter name="url" value="http://0.0.0.0:4723/wd/hub" />
+<suite name="Parallel">
+    <!--    verbose="2" parallel="tests" thread-count="2"-->
+    <!--    <test name="Device1">-->
+    <!--        <parameter name="deviceName" value="Pixel_3a_XL_API_23" />-->
+    <!--        <parameter name="udid" value="emulator-5554" />-->
+    <!--        <parameter name="platformVersion" value="6.0" />-->
+    <!--        <parameter name="url" value="http://0.0.0.0:4723/wd/hub" />-->
+    <!--        <parameter name="wdaLocalPort" value="8100"/>-->
+
+    <!--        <classes>-->
+    <!--            <class name="testScripts.TestScript1"/>-->
+    <!--        </classes>-->
+    <!--    </test>-->
+
+    <!--    <test name="Device2">-->
+    <!--        <parameter name="deviceName" value="Pixel_2_API_26_2" />-->
+    <!--        <parameter name="udid" value="emulator-5556" />-->
+    <!--        <parameter name="platformVersion" value="8.0" />-->
+    <!--        <parameter name="url" value="http://0.0.0.0:4733/wd/hub" />-->
+    <!--        <parameter name="wdaLocalPort" value="8102"/>-->
+
+    <!--        <classes>-->
+    <!--            <class name="testScripts.TestScript1"/>-->
+    <!--        </classes>-->
+    <!--    </test>-->
+    <test name="Test01">
         <classes>
             <class name="testScripts.TestScript1"/>
         </classes>
     </test>
-    <test name="Device-2">
-        <parameter name="deviceName" value="emulator-5556" />
-        <parameter name="udid" value="emulator-5556" />
-        <parameter name="platformVersion" value="8.0" />
-        <parameter name="url" value="http://0.0.0.0:4723/wd/hub" />
+    <test name="Test02">
+        <classes>
+            <class name="testScripts.TestScript1"/>
+        </classes>
+    </test>
+    <test name="Test03">
         <classes>
             <class name="testScripts.TestScript1"/>
         </classes>

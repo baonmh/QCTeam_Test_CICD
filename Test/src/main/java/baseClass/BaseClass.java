@@ -14,9 +14,9 @@ import io.appium.java_client.MobileElement;
 public class BaseClass {
 
     public static AppiumDriver<MobileElement> driver;
-    @BeforeTest
-    @Parameters({"deviceName","udid", "platformVersion","url"})
-    public void setup(String deviceName, String udid,String platformVersion,String url) throws InterruptedException, MalformedURLException
+    @BeforeTest(alwaysRun = true)
+    @Parameters({"deviceName","udid", "platformVersion","url", "systemPort"})
+    public void setup(String deviceName, String udid,String platformVersion,String url, String systemPort) throws InterruptedException, MalformedURLException
     {
         DesiredCapabilities cap=new DesiredCapabilities();
         cap.setCapability("deviceName", deviceName);
@@ -26,8 +26,8 @@ public class BaseClass {
         cap.setCapability("platformName", "Android");
         cap.setCapability("platformVersion", platformVersion);
         cap.setCapability("isHeadless", true);
+        cap.setCapability("systemPort", systemPort);
         driver=new AppiumDriver<MobileElement>(new URL(url), cap);
-        driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
         Thread.sleep(5000);
 
     }

@@ -45,7 +45,7 @@
         <dependency>
             <groupId>org.testng</groupId>
             <artifactId>testng</artifactId>
-            <version>6.9.13.6</version>
+            <version>6.11</version>
         </dependency>
         <dependency>
             <groupId>org.apache.commons</groupId>
@@ -99,6 +99,30 @@
                         <!-- TestNG suite XML files -->
                         <suiteXmlFile>testng.xml</suiteXmlFile>
                     </suiteXmlFiles>
+                    <properties>
+                        <property>
+                            <name>testnames</name>
+                            <value>${tests}</value>
+
+                            <name>customDeviceName</name>
+                            <value>${deviceName}</value>
+
+                            <name>customUdid</name>
+                            <value>${udid}</value>
+
+                            <name>customPlatformVersion</name>
+                            <value>${platformVersion}</value>
+
+                            <name>customUrl</name>
+                            <value>${url}</value>
+
+                            <name>customLocalPort</name>
+                            <value>${localPort}</value>
+
+                            <name>customClassName</name>
+                            <value>${className}</value>
+                        </property>
+                    </properties>
                 </configuration>
             </plugin>
         </plugins>
